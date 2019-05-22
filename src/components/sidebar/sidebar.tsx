@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Icon from '@material-ui/core/Icon';
 
 interface IAppProps {}
 
@@ -8,16 +9,22 @@ interface IMenu {
 }
 
 const menu: IMenu[] = [
-  { icon: 'exemple icon 1', title: 'Dashboard' },
-  { icon: 'exemple icon 2', title: 'Settings' }
+  { icon: 'dashboard', title: 'Dashboard' },
+  { icon: 'settings', title: 'Settings' }
 ];
 
 function Sidebar(props: IAppProps) {
   return (
     <React.Fragment>
+      <div id="sidebar-logo">
+        <span>InstaBot</span>
+      </div>
       <ul>
         {menu.map((menu: IMenu, index: number) => (
-          <li key={index}>{menu.title}</li>
+          <li key={index}>
+            <Icon>{menu.icon}</Icon>
+            <span>{menu.title}</span>
+          </li>
         ))}
       </ul>
     </React.Fragment>

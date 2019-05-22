@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 src/style.css
-
+yarn.lock
+src/style.css
